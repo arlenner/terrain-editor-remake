@@ -595,7 +595,8 @@ objStyle : Model -> Object -> Cube -> List (Attribute Msg)
 objStyle model obj c =
     if obj.tag == "placeholder" then []
     else
-        [ style "border-radius" "50%"
+        [ attribute "obj-data" "Use the arrow keys to move me! Click me to select me! I'm red when selected!"
+        , style "border-radius" "50%"
         , style "position" "absolute"
         , style "height" ((String.fromFloat ( toFloat (obj.size) + 0.5)) ++ "em")
         , style "width" ((String.fromFloat (toFloat (obj.size) + 0.5)) ++ "em")

@@ -6359,10 +6359,19 @@ var author$project$Main$Select2 = function (a) {
 var elm$core$Basics$negate = function (n) {
 	return -n;
 };
+var elm$virtual_dom$VirtualDom$attribute = F2(
+	function (key, value) {
+		return A2(
+			_VirtualDom_attribute,
+			_VirtualDom_noOnOrFormAction(key),
+			_VirtualDom_noJavaScriptOrHtmlUri(value));
+	});
+var elm$html$Html$Attributes$attribute = elm$virtual_dom$VirtualDom$attribute;
 var author$project$Main$objStyle = F3(
 	function (model, obj, c) {
 		return (obj.tag === 'placeholder') ? _List_Nil : _List_fromArray(
 			[
+				A2(elm$html$Html$Attributes$attribute, 'obj-data', 'Use the arrow keys to move me! Click me to select me! I\'m red when selected!'),
 				A2(elm$html$Html$Attributes$style, 'border-radius', '50%'),
 				A2(elm$html$Html$Attributes$style, 'position', 'absolute'),
 				A2(
@@ -6554,14 +6563,6 @@ var author$project$Main$buttonStyle = _List_fromArray(
 		A2(elm$html$Html$Attributes$style, 'margin', '.4em')
 	]);
 var elm$html$Html$button = _VirtualDom_node('button');
-var elm$virtual_dom$VirtualDom$attribute = F2(
-	function (key, value) {
-		return A2(
-			_VirtualDom_attribute,
-			_VirtualDom_noOnOrFormAction(key),
-			_VirtualDom_noJavaScriptOrHtmlUri(value));
-	});
-var elm$html$Html$Attributes$attribute = elm$virtual_dom$VirtualDom$attribute;
 var author$project$Main$htDownBtn = A2(
 	elm$html$Html$button,
 	A2(
